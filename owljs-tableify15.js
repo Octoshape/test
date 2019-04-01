@@ -44,7 +44,7 @@ function main(args) {
     owl = new OWL();
     owl.config.logLevel = options.verbosity;
     owl.addCatalog();
-    args.forEach((fn) => { owl.loadFile(fn) } );
+    args.forEach(function(fn) { owl.loadFile(fn) } );
     isElk = true;
     if (options.reasoner != null) {
         owl.setReasonerType(options.reasoner);
