@@ -44,7 +44,7 @@ function main(args) {
     owl = new OWL();
     owl.config.logLevel = options.verbosity;
     owl.addCatalog();
-    args.forEach(function(fn) { owl.loadFile(fn) } );
+    args.forEach((fn) => { owl.loadFile(fn) } );
     isElk = true;
     if (options.reasoner != null) {
         owl.setReasonerType(options.reasoner);
@@ -190,6 +190,11 @@ function getColVals(c, type) {
         ];
     if (anPropObjs) {
         anPropObjs.forEach(function(r) {
+int main (int agrc, char* argv[]) {
+    int x = new int(4);
+    free(x);
+    foo(x);
+}
             vals.push(
                 { name: r.label,
                   value: owl.getAnnotationValues(c,r.obj).join("|") }
